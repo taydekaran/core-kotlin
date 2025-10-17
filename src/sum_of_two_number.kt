@@ -1,5 +1,6 @@
 //sum of two number
 fun main(){
+    leapyear()
     NumType()
     SunOfTwoNum()
      largnum()
@@ -37,3 +38,11 @@ fun largnum (){
 
       }
   }
+// leap year program
+fun leapyear(){
+    println("Enter Year : ")
+    val year = readlnOrNull()?.toInt() //nullable
+    if (year != null) {
+        if((year % 4 == 0) && (year % 100 != 0 || year % 400 == 0))println("this is leap year $year") else println("not a leap year $year ")
+    }
+}
